@@ -1,0 +1,45 @@
+﻿/* ── ROW 3 - Skills ── */
+.skills-section {
+    background-color: var(--box-background-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+}
+
+.skill-box {
+    border: 1px solid var(--box-border-color);
+    border-radius: 4px;
+    background-color: var(--bs-body-bg);
+    justify-content: center;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+.skill-attr {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    min-width: 30px;
+}
+
+.skill-name {
+    flex: 1;
+}
+
+.skill-rank {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.trained  { color: #4a7c59; }
+.expert   { color: #1a5276; }
+.master   { color: #6c3483; }
+.legendary { color: var(--box-border-color); }

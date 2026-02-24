@@ -1,0 +1,97 @@
+﻿/* ── ROW 1 ── */
+.about-row-1 {
+    display: flex;
+    background-color: var(--box-background-color);
+    border-bottom: 2px solid var(--box-border-color);
+}
+
+/* Photo */
+.photo-container {
+    padding: 1rem;
+    border-right: 2px solid var(--box-border-color);
+    flex-shrink: 0;
+}
+
+.photo-placeholder {
+    width: 140px;
+    height: 160px;
+    border: 2px solid var(--box-border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: var(--bs-body-bg);
+}
+
+.photo-placeholder:hover {
+    background-color: var(--box-border-color);
+    color: var(--bs-body-bg);
+}
+
+.photo-hint {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-top: 6px;
+}
+
+/* Middle info column */
+.info-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--box-border-color);
+}
+
+/* Right info column */
+.info-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual info boxes */
+.info-box {
+    border-bottom: 1px solid var(--box-border-color);
+    padding: 6px 10px;
+    flex: 1;
+}
+
+.info-left .info-box:last-child,
+.info-right .info-box:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    display: block;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* The three small boxes at the bottom of info-right */
+.info-row-3 {
+    display: flex;
+    flex: 1;
+}
+
+.info-row-3 .info-box {
+    flex: 1;
+    border-right: 1px solid var(--box-border-color);
+    border-bottom: none;
+}
+
+.info-row-3 .info-box:last-child {
+    border-right: none;
+}

@@ -1,0 +1,35 @@
+﻿/* ── ROW 2 - Attributes ── */
+.attributes-section {
+    border-bottom: 2px solid var(--box-border-color);
+    background-color: var(--box-background-color);
+}
+
+.attributes-row {
+    display: flex;
+    padding: 0.75rem;
+    gap: 0.5rem;
+}
+
+.attribute-box {
+    flex: 1;
+    border: 2px solid var(--box-border-color);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px 4px;
+    background-color: var(--bs-body-bg);
+}
+
+.attr-name {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--box-border-color);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.attr-score {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1;
+}
