@@ -3,7 +3,6 @@
 function Header() {
     return (
         <header className="header">
-            <img src="logo.png" alt="Company Logo" className="logo"/>
             <nav>
                 <ul>
                     <li><a href="/public">Home</a></li>

@@ -1,0 +1,5 @@
+﻿.about-section {
+    background-color: var(--box-background-color);
+    border: 2px solid var(--box-border-color);
+    color: var(--text-color);
+}
