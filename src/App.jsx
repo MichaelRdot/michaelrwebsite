@@ -1,3 +1,5 @@
+import React from 'react';
+import './App.css';
 import Header from './components/Header & Footer/Header.jsx';
 import ProjectsSection from "./components/Projects Section/ProjectsSection.jsx";
 import EducationSection from "./components/Education Section/EducationSection.jsx";
