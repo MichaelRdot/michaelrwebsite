@@ -1,19 +1,56 @@
 ﻿import './Header.css'
+import { useState, useEffect } from 'react'
 
 function Header() {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
         <header className="header">
+
+            {/* Left - Name */}
             <div className="header-name">Michael Russelburg</div>
-            <nav>
-                <a href="#aboutMeSection">About Me </a>
-                <a href="#projectsSection">Projects </a>
-                <a href="#educationSection">Education </a>
-                <a href="#workSection">Work </a>
-                <a href="#hobbiesSection">Hobbies </a>
+
+            {/* Center - Nav links (desktop) */}
+            <nav className="header-nav">
+                <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
+                <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
+                <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
+                <a href="#workSection" onClick={() => setMenuOpen(false)}>Work</a>
+                <a href="#hobbiesSection" onClick={() => setMenuOpen(false)}>Hobbies</a>
             </nav>
-            <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">
-                GitHub
-            </a>
+
+            {/* Right - GitHub (hidden when scrolled) + Hamburger (mobile only) */}
+            <div className="header-right">
+                {!scrolled && (
+                    <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">
+                    GitHub
+                    </a>
+                    )}
+                <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+                    ☰
+                </button>
+            </div>
+
+            {/* Mobile dropdown menu */}
+            {menuOpen && (
+                <div className="mobile-menu">
+                    <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
+                    <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
+                    <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
+                    <a href="#workSection" onClick={() => setMenuOpen(false)}>Work</a>
+                    <a href="#hobbiesSection" onClick={() => setMenuOpen(false)}>Hobbies</a>
+                </div>
+            )}
+
         </header>
     )
 }

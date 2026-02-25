@@ -10,6 +10,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 .header-name {
@@ -22,6 +23,7 @@
 .header-nav {
     display: flex;
     gap: 0.75rem;
+    align-items: center;
 }
 
 .header-nav a {
@@ -33,13 +35,17 @@
     padding: 6px 14px;
     border-radius: 4px;
     white-space: nowrap;
-    border-bottom: none;
     transition: opacity 0.2s;
 }
 
 .header-nav a:hover {
-    border-bottom: none;
     opacity: 0.85;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .header-github {
@@ -58,9 +64,49 @@
     opacity: 0.85;
 }
 
-/* Mobile - hide nav links, keep name and GitHub */
-@media (max-width: 600px) {
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0 4px;
+}
+
+.mobile-menu {
+    display: none;
+    width: 100%;
+    background-color: var(--box-background-color);
+    border-top: 1px solid var(--box-border-color);
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-menu a {
+    color: var(--bs-body-bg);
+    background-color: var(--box-border-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+
+.mobile-menu a:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
     .header-nav {
         display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-menu {
+        display: flex;
     }
 }
