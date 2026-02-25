@@ -7,7 +7,6 @@
 }
 
 .projects-grid {
-    border: 2px solid var(--box-border-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;

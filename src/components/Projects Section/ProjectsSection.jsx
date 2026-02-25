@@ -32,7 +32,7 @@ const projects = [
 
 function ProjectsSection() {
     return (
-        <section id="projectsSection">
+        <section id="projectsSection" className="projects-section">
             <div className="about-title-bar">Quests &amp; Adventures</div>
             <div className="projects-grid">
                 {projects.map((project) => (
