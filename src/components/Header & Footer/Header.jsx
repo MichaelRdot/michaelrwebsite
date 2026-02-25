@@ -21,6 +21,7 @@ function Header() {
 
             {/* Center - Nav links (desktop) */}
             <nav className="header-nav">
+                <a href="#careerGoalsSection" onClick={() => setMenuOpen(false)}>Goals</a>
                 <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
                 <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
                 <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
