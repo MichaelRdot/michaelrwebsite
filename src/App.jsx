@@ -13,15 +13,17 @@ function App() {
     return (
         <>
             <Header/>
-            <CareerGoalsSection/>
-            <div className="container-xl">
-                <AboutMeSection/>
-                <ProjectsSection/>
-                <EducationSection/>
-                <WorkSection/>
-                <HobbiesSection/>
+            <div id="page-content" style={{ paddingTop: '56px', transition: 'padding-top 0.3s ease' }}>
+                <CareerGoalsSection/>
+                <div className="container-xl">
+                    <AboutMeSection/>
+                    <ProjectsSection/>
+                    <EducationSection/>
+                    <WorkSection/>
+                    <HobbiesSection/>
+                </div>
+                <Footer/>
             </div>
-            <Footer/>
         </>
     )
 }

@@ -12,10 +12,12 @@ function Header() {
 
             if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
                 setHeaderVisible(true)
-                document.body.classList.remove('header-is-hidden')
+                const content = document.getElementById('page-content')
+                if (content) content.style.paddingTop = '56px'
             } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
                 setHeaderVisible(false)
-                document.body.classList.add('header-is-hidden')
+                const content = document.getElementById('page-content')
+                if (content) content.style.paddingTop = '0px'
             }
 
             lastScrollY.current = currentScrollY
@@ -52,9 +54,12 @@ function Header() {
                 className="hamburger-fixed"
                 onClick={() => {
                     if (window.innerWidth <= 768) {
-                        setMenuOpen(!menuOpen)     // mobile: toggle dropdown
+                        setMenuOpen(!menuOpen)
                     } else {
-                        setHeaderVisible(!headerVisible)  // desktop: toggle header
+                        const newVisible = !headerVisible
+                        setHeaderVisible(newVisible)
+                        const content = document.getElementById('page-content')
+                        if (content) content.style.paddingTop = newVisible ? '56px' : '0px'
                     }
                 }}
                 aria-label="Toggle navigation"
