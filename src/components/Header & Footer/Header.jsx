@@ -32,17 +32,11 @@ function Header() {
                 <div className="header-name">Michael Russelburg</div>
 
                 <nav className="header-nav">
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#careerGoalsSection">Goals</a>
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#aboutMeSection">About Me</a>
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#projectsSection">Projects</a>
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#educationSection">Education</a>
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#workSection">Work</a>
-                    {/* noinspection HtmlUnknownAnchorTarget */}
                     <a href="#hobbiesSection">Hobbies</a>
                 </nav>
 
