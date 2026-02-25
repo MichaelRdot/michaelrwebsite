@@ -12,10 +12,12 @@ function Header() {
 
             if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
                 setHeaderVisible(true)
+                document.body.classList.remove('header-is-hidden')
                 const content = document.getElementById('page-content')
                 if (content) content.style.paddingTop = '56px'
             } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
                 setHeaderVisible(false)
+                document.body.classList.add('header-is-hidden')
                 const content = document.getElementById('page-content')
                 if (content) content.style.paddingTop = '0px'
             }
@@ -27,19 +29,34 @@ function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    const scrollToSection = (id) => {
+        const target = document.getElementById(id)
+        if (!target) return
+        const offset = target.getBoundingClientRect().top + window.scrollY - (headerVisible ? 56 : 0)
+        window.scrollTo({ top: offset, behavior: 'smooth' })
+        setMenuOpen(false)
+    }
+
+    const navLinks = [
+        { label: 'Goals', id: 'careerGoalsSection' },
+        { label: 'About Me', id: 'aboutMeSection' },
+        { label: 'Projects', id: 'projectsSection' },
+        { label: 'Education', id: 'educationSection' },
+        { label: 'Work', id: 'workSection' },
+        { label: 'Hobbies', id: 'hobbiesSection' },
+    ]
+
     return (
         <>
-            {/* The main header bar */}
             <header className={`header ${headerVisible ? 'header-visible' : 'header-hidden'}`}>
                 <div className="header-name">Michael Russelburg</div>
 
                 <nav className="header-nav">
-                    <a href="#careerGoalsSection">Goals</a>
-                    <a href="#aboutMeSection">About Me</a>
-                    <a href="#projectsSection">Projects</a>
-                    <a href="#educationSection">Education</a>
-                    <a href="#workSection">Work</a>
-                    <a href="#hobbiesSection">Hobbies</a>
+                    {navLinks.map((link) => (
+                        <button key={link.id} className="nav-btn" onClick={() => scrollToSection(link.id)}>
+                            {link.label}
+                        </button>
+                    ))}
                 </nav>
 
                 <div className="header-right">
@@ -49,7 +66,6 @@ function Header() {
                 </div>
             </header>
 
-            {/* Hamburger - always fixed */}
             <button
                 className="hamburger-fixed"
                 onClick={() => {
@@ -67,15 +83,13 @@ function Header() {
                 {menuOpen ? '✕' : '☰'}
             </button>
 
-            {/* Mobile dropdown only */}
             {menuOpen && (
                 <div className="mobile-menu-fixed">
-                    <a href="#careerGoalsSection" onClick={() => setMenuOpen(false)}>Goals</a>
-                    <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
-                    <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
-                    <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
-                    <a href="#workSection" onClick={() => setMenuOpen(false)}>Work</a>
-                    <a href="#hobbiesSection" onClick={() => setMenuOpen(false)}>Hobbies</a>
+                    {navLinks.map((link) => (
+                        <button key={link.id} className="nav-btn" onClick={() => scrollToSection(link.id)}>
+                            {link.label}
+                        </button>
+                    ))}
                 </div>
             )}
         </>

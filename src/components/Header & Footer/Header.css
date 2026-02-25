@@ -24,10 +24,11 @@
 }
 
 .header-name {
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     white-space: nowrap;
+    font-family: var(--font-display);
 }
 
 .header-nav {
@@ -129,6 +130,24 @@
 }
 
 .mobile-menu-fixed a:hover {
+    opacity: 0.85;
+}
+
+.nav-btn {
+    font-family: var(--font-heading);
+    color: var(--bs-body-bg);
+    background-color: var(--box-border-color);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.nav-btn:hover {
     opacity: 0.85;
 }
 

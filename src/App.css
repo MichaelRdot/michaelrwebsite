@@ -4,8 +4,44 @@
     --box-border-color: #69001B;
     --box-background-color: #D1C39B;
     --header-height: 56px;
+    --font-display: 'Cinzel Decorative', serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'EB Garamond', serif;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    padding-top: var(--header-height);
+    transition: padding-top 0.3s ease;
+}
+
+body.header-is-hidden {
+    padding-top: 0;
+}
+
+/* Title bars - Cinzel Decorative */
+.about-title-bar,
+.section-title-bar,
+.char-info-card-header,
+.work-entry-header,
+.education-entry-header,
+.hobby-card-header,
+.project-card-header,
+.career-goals-label {
+    font-family: var(--font-display);
+}
+
+/* Subheadings and values - Cormorant Garamond */
+.header-name,
+.work-title,
+.education-degree,
+.project-name,
+.char-info-card-body,
+.attr-score {
+    font-family: var(--font-heading);
 }
