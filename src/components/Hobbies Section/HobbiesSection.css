@@ -36,7 +36,6 @@
 .hobby-name {
     color: var(--bs-body-bg);
     font-weight: bold;
-    font-size: 0.95rem;
     letter-spacing: 0.5px;
 }
 
@@ -52,7 +51,6 @@
 .hobby-trait {
     background-color: var(--box-border-color);
     color: var(--bs-body-bg);
-    font-size: 0.68rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -65,13 +63,11 @@
 .hobby-divider {
     height: 1px;
     background-color: var(--box-border-color);
-    margin: 0 10px;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 /* Description body */
 .hobby-description {
-    font-size: 0.85rem;
     margin: 0;
     padding: 8px 10px;
     line-height: 1.5;

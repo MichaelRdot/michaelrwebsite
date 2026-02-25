@@ -11,13 +11,12 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 18px;
 }
 
 body {
     font-family: var(--font-body);
-    font-size: 1.05rem;
-    padding-top: var(--header-height);
-    transition: padding-top 0.3s ease;
+    font-weight: 500;
 }
 
 body.header-is-hidden {
@@ -44,4 +43,5 @@ body.header-is-hidden {
 .char-info-card-body,
 .attr-score {
     font-family: var(--font-heading);
+    font-weight: 700;
 }

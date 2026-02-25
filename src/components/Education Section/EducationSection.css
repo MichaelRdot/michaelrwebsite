@@ -47,22 +47,18 @@
 
 .education-degree {
     font-weight: bold;
-    font-size: 0.95rem;
 }
 
 .education-institution {
-    font-size: 0.8rem;
     opacity: 0.85;
 }
 
 .education-dates {
-    font-size: 0.8rem;
     font-weight: bold;
     white-space: nowrap;
 }
 
 .education-status {
-    font-size: 0.68rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;

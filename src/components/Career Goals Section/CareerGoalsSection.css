@@ -14,7 +14,6 @@
 
 .career-goals-label {
     font-weight: bold;
-    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     white-space: nowrap;
@@ -25,7 +24,6 @@
 
 .career-goals-text {
     margin: 0;
-    font-size: 0.95rem;
     line-height: 1.6;
     font-style: italic;
 }
