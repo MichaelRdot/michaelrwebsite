@@ -31,14 +31,8 @@ function Header() {
 
             {/* Right - GitHub (hidden when scrolled) + Hamburger (mobile only) */}
             <div className="header-right">
-                {!scrolled && (
-                    <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">
-                    GitHub
-                    </a>
-                    )}
-                <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-                    ☰
-                </button>
+                <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">GitHub</a>
+                <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">☰</button>
             </div>
 
             {/* Mobile dropdown menu */}
