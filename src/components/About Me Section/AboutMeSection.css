@@ -4,6 +4,8 @@
     margin: 2rem 0;
     border-radius: 4px;
     overflow: hidden;
+    font-size: var(--text-lg);
+
 }
 
 .about-title-bar,
@@ -14,9 +16,8 @@
     font-weight: bold;
     padding: 5px;
     letter-spacing: 1px;
+    font-size: var(--text-xl);
 }
-
-
 
 /* ── Mobile ── */
 @media (max-width: 600px) {

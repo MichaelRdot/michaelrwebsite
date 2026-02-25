@@ -7,11 +7,14 @@
     --font-display: 'Cinzel Decorative', serif;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'EB Garamond', serif;
+    --text-sm: 0.85rem;
+    --text-lg: 1.15rem;
+    --text-xl: 1.5rem;
 }
 
 html {
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 body {
