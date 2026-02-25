@@ -44,21 +44,17 @@
 
 .work-title {
     font-weight: bold;
-    font-size: 0.95rem;
 }
 
 .work-employer {
-    font-size: 0.8rem;
     opacity: 0.85;
 }
 
 .work-dates {
-    font-size: 0.8rem;
     font-weight: bold;
 }
 
 .work-location {
-    font-size: 0.75rem;
     opacity: 0.85;
 }
 
@@ -71,7 +67,6 @@
 }
 
 .work-bullets li {
-    font-size: 0.875rem;
     line-height: 1.5;
 }
 

@@ -19,11 +19,9 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
 }
 
 .skill-attr {
-    font-size: 0.75rem;
     opacity: 0.6;
     min-width: 30px;
 }
@@ -33,7 +31,6 @@
 }
 
 .skill-rank {
-    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
 }
