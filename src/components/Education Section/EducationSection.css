@@ -22,8 +22,8 @@
 }
 
 .education-entry-header {
-    background-color: var(--box-border-color);
-    color: var(--bs-body-bg);
+    background-color: var(--bs-body-bg);
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;

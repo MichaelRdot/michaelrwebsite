@@ -10,8 +10,7 @@ function CharacterInfoSubSection() {
                 {/* Photo */}
                 <div className="photo-container">
                     <div className="photo-placeholder">
-                        <p>Picture of me</p>
-                        <span className="photo-hint">Hover me!</span>
+
                     </div>
                 </div>
 
