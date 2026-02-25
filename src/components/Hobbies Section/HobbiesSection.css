@@ -1,0 +1,85 @@
+.hobbies-section {
+    border: 2px solid var(--box-border-color);
+    color: var(--text-color);
+    margin: 2rem 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--box-background-color);
+}
+
+/* The card itself */
+.hobby-card {
+    background-color: var(--bs-body-bg);
+    border: 2px solid var(--box-border-color);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Bold dark header bar — the PF2e action card look */
+.hobby-card-header {
+    background-color: var(--box-border-color);
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hobby-name {
+    color: var(--bs-body-bg);
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Trait tags — the little rectangles under the header in PF2e */
+.hobby-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 6px 10px;
+    background-color: var(--box-background-color);
+}
+
+.hobby-trait {
+    background-color: var(--box-border-color);
+    color: var(--bs-body-bg);
+    font-size: 0.68rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 2px;
+    opacity: 0.75;
+}
+
+/* The horizontal rule between traits and description */
+.hobby-divider {
+    height: 1px;
+    background-color: var(--box-border-color);
+    margin: 0 10px;
+    opacity: 0.4;
+}
+
+/* Description body */
+.hobby-description {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 8px 10px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+}
