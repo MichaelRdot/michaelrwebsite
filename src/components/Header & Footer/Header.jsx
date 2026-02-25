@@ -1,43 +1,77 @@
 ﻿import './Header.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
+    const [headerVisible, setHeaderVisible] = useState(true)
+    const lastScrollY = useRef(0)
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50)
+            const currentScrollY = window.scrollY
+
+            if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
+                setHeaderVisible(true)
+                document.body.classList.remove('header-is-hidden')
+            } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+                setHeaderVisible(false)
+                document.body.classList.add('header-is-hidden')
+            }
+
+            lastScrollY.current = currentScrollY
         }
-        window.addEventListener('scroll', handleScroll)
+
+        window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     return (
-        <header className="header">
+        <>
+            {/* The main header bar */}
+            <header className={`header ${headerVisible ? 'header-visible' : 'header-hidden'}`}>
+                <div className="header-name">Michael Russelburg</div>
 
-            {/* Left - Name */}
-            <div className="header-name">Michael Russelburg</div>
+                <nav className="header-nav">
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#careerGoalsSection">Goals</a>
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#aboutMeSection">About Me</a>
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#projectsSection">Projects</a>
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#educationSection">Education</a>
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#workSection">Work</a>
+                    {/* noinspection HtmlUnknownAnchorTarget */}
+                    <a href="#hobbiesSection">Hobbies</a>
+                </nav>
 
-            {/* Center - Nav links (desktop) */}
-            <nav className="header-nav">
-                <a href="#careerGoalsSection" onClick={() => setMenuOpen(false)}>Goals</a>
-                <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
-                <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
-                <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
-                <a href="#workSection" onClick={() => setMenuOpen(false)}>Work</a>
-                <a href="#hobbiesSection" onClick={() => setMenuOpen(false)}>Hobbies</a>
-            </nav>
+                <div className="header-right">
+                    <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">
+                        GitHub
+                    </a>
+                </div>
+            </header>
 
-            {/* Right - GitHub (hidden when scrolled) + Hamburger (mobile only) */}
-            <div className="header-right">
-                <a href="https://github.com/MichaelRdot" target="_blank" rel="noreferrer" className="header-github">GitHub</a>
-                <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">☰</button>
-            </div>
+            {/* Hamburger - always fixed */}
+            <button
+                className="hamburger-fixed"
+                onClick={() => {
+                    if (window.innerWidth <= 768) {
+                        setMenuOpen(!menuOpen)     // mobile: toggle dropdown
+                    } else {
+                        setHeaderVisible(!headerVisible)  // desktop: toggle header
+                    }
+                }}
+                aria-label="Toggle navigation"
+            >
+                {menuOpen ? '✕' : '☰'}
+            </button>
 
-            {/* Mobile dropdown menu */}
+            {/* Mobile dropdown only */}
             {menuOpen && (
-                <div className="mobile-menu">
+                <div className="mobile-menu-fixed">
+                    <a href="#careerGoalsSection" onClick={() => setMenuOpen(false)}>Goals</a>
                     <a href="#aboutMeSection" onClick={() => setMenuOpen(false)}>About Me</a>
                     <a href="#projectsSection" onClick={() => setMenuOpen(false)}>Projects</a>
                     <a href="#educationSection" onClick={() => setMenuOpen(false)}>Education</a>
@@ -45,8 +79,7 @@ function Header() {
                     <a href="#hobbiesSection" onClick={() => setMenuOpen(false)}>Hobbies</a>
                 </div>
             )}
-
-        </header>
+        </>
     )
 }
 

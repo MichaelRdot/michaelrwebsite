@@ -1,16 +1,26 @@
 ﻿.header {
     background-color: var(--box-background-color);
     border-bottom: 2px solid var(--box-border-color);
-    padding: 0 20px;
+    padding: 0 60px 0 20px;
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+
+.header-visible {
+    transform: translateY(0);
+}
+
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 .header-name {
@@ -45,7 +55,8 @@
 .header-right {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    min-width: 90px;
+    justify-content: flex-end;
 }
 
 .header-github {
@@ -64,27 +75,48 @@
     opacity: 0.85;
 }
 
-.hamburger {
-    display: block;
-    background: none;
+/* Always-visible fixed hamburger button */
+.hamburger-fixed {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    z-index: 200;
+    background-color: var(--box-border-color);
+    color: var(--bs-body-bg);
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
     cursor: pointer;
-    color: var(--text-color);
-    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
 }
 
-.mobile-menu {
-    display: flex;
-    width: 100%;
+.hamburger-fixed:hover {
+    opacity: 0.85;
+}
+
+/* Fixed dropdown menu */
+.mobile-menu-fixed {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    z-index: 150;
     background-color: var(--box-background-color);
-    border-top: 1px solid var(--box-border-color);
+    border-left: 2px solid var(--box-border-color);
+    border-bottom: 2px solid var(--box-border-color);
+    border-radius: 0 0 0 4px;
     padding: 0.75rem 1rem;
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    min-width: 180px;
 }
 
-.mobile-menu a {
+.mobile-menu-fixed a {
     color: var(--bs-body-bg);
     background-color: var(--box-border-color);
     text-decoration: none;
@@ -93,20 +125,19 @@
     padding: 8px 14px;
     border-radius: 4px;
     transition: opacity 0.2s;
+    text-align: center;
 }
 
-.mobile-menu a:hover {
+.mobile-menu-fixed a:hover {
     opacity: 0.85;
 }
 
+/* Hide desktop nav on mobile since hamburger handles it */
 @media (max-width: 768px) {
     .header-nav {
         display: none;
     }
-    .hamburger {
-        display: block;
-    }
-    .mobile-menu {
-        display: flex;
+    .header-right {
+        display: none;
     }
 }

@@ -3,8 +3,18 @@
     --text-color: #242021;
     --box-border-color: #69001B;
     --box-background-color: #D1C39B;
+    --header-height: 56px;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    padding-top: var(--header-height);
+    transition: padding-top 0.3s ease;
+}
+
+body.header-is-hidden {
+    padding-top: 0;
 }
