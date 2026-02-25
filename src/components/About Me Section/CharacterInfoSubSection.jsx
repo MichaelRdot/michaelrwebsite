@@ -9,8 +9,9 @@ function CharacterInfoSubSection() {
 
                 {/* Photo */}
                 <div className="photo-container">
-                    <div className="photo-placeholder">
-
+                    <div className="photo-hover-wrapper">
+                        <img src="/Miraak, My Boy!!.jpg" className="photo-normal" alt="Portrait" />
+                        <img src="/Miraak, My (Evil) Boy!!.jpg" className="photo-hover" alt="Portrait" />
                     </div>
                 </div>
 
