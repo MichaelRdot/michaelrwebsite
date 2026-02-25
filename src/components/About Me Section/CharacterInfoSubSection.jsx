@@ -7,49 +7,48 @@ function CharacterInfoSubSection() {
             <div className="about-title-bar">Character Info</div>
             <div className="about-row-1">
 
-                {/* Photo with hover effect */}
+                {/* Photo */}
                 <div className="photo-container">
                     <div className="photo-placeholder">
-                        <p>Picture of me,</p>
-                        <p>professional.</p>
-                        <p className="photo-hint">Hover me!</p>
+                        <p>Picture of me</p>
+                        <span className="photo-hint">Hover me!</span>
                     </div>
                 </div>
 
-                {/* Middle info - Name & Class */}
+                {/* Middle - Name & Class */}
                 <div className="info-left">
-                    <div className="info-box">
-                        <span className="info-label">Character Name</span>
-                        <div className="info-value">Michael A. Russelburg</div>
+                    <div className="info-card">
+                        <div className="char-info-card-header">Character Name</div>
+                        <div className="char-info-card-body">Michael A. Russelburg</div>
                     </div>
-                    <div className="info-box">
-                        <span className="info-label">Class</span>
-                        <div className="info-value">Inventor</div>
+                    <div className="info-card">
+                        <div className="char-info-card-header">Class</div>
+                        <div className="char-info-card-body">Inventor</div>
                     </div>
                 </div>
 
-                {/* Right info - Ancestry, Background, Size/Alignment/Age */}
+                {/* Right - Ancestry, Background, Size/Alignment/Age */}
                 <div className="info-right">
-                    <div className="info-box">
-                        <span className="info-label">Ancestry and Heritage</span>
-                        <div className="info-value">Human</div>
+                    <div className="info-card">
+                        <div className="char-info-card-header">Ancestry & Heritage</div>
+                        <div className="char-info-card-body">Human</div>
                     </div>
-                    <div className="info-box">
-                        <span className="info-label">Background</span>
-                        <div className="info-value">Scholar</div>
+                    <div className="info-card">
+                        <div className="char-info-card-header">Background</div>
+                        <div className="char-info-card-body">Scholar</div>
                     </div>
                     <div className="info-row-3">
-                        <div className="info-box">
-                            <span className="info-label">Size</span>
-                            <div className="info-value">Medium</div>
+                        <div className="info-card">
+                            <div className="char-info-card-header">Size</div>
+                            <div className="char-info-card-body">Medium</div>
                         </div>
-                        <div className="info-box">
-                            <span className="info-label">Alignment</span>
-                            <div className="info-value">Neutral Good</div>
+                        <div className="info-card">
+                            <div className="char-info-card-header">Alignment</div>
+                            <div className="char-info-card-body">Neutral Good</div>
                         </div>
-                        <div className="info-box">
-                            <span className="info-label">Age</span>
-                            <div className="info-value">22</div>
+                        <div className="info-card">
+                            <div className="char-info-card-header">Age</div>
+                            <div className="char-info-card-body">22</div>
                         </div>
                     </div>
                 </div>
