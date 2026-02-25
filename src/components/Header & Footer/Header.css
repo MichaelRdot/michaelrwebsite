@@ -1,8 +1,66 @@
 ﻿.header {
     background-color: var(--box-background-color);
-    padding: 10px 20px;
+    border-bottom: 2px solid var(--box-border-color);
+    padding: 0 20px;
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.header-nav {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header-nav a {
+    color: var(--bs-body-bg);
+    background-color: var(--box-border-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    border-bottom: none;
+    transition: opacity 0.2s;
+}
+
+.header-nav a:hover {
+    border-bottom: none;
+    opacity: 0.85;
+}
+
+.header-github {
+    color: var(--bs-body-bg);
+    background-color: var(--box-border-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.header-github:hover {
+    opacity: 0.85;
+}
+
+/* Mobile - hide nav links, keep name and GitHub */
+@media (max-width: 600px) {
+    .header-nav {
+        display: none;
+    }
 }

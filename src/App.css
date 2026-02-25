@@ -4,3 +4,7 @@
     --box-border-color: #69001B;
     --box-background-color: #D1C39B;
 }
+
+html {
+    scroll-behavior: smooth;
+}
