@@ -2,7 +2,15 @@
 import './AboutMeSection.css';
 
 function CharacterInfoSubSection() {
-    const meows = ['/Cat Call.m4a', '/Chill Meow.m4a', '/Meow #1.m4a', '/Meow Deep.m4a', '/Meowth.m4a', '/Ruff.m4a', '/Sassy Meow.m4a', '/Sparky Meow.m4a']
+    const meows = [
+        `${import.meta.env.BASE_URL}Cat Call.m4a`,
+        `${import.meta.env.BASE_URL}Chill Meow.m4a`,
+        `${import.meta.env.BASE_URL}Meow #1.m4a`,
+        `${import.meta.env.BASE_URL}Meow Deep.m4a`,
+        `${import.meta.env.BASE_URL}Meowth.m4a`,
+        `${import.meta.env.BASE_URL}Ruff.m4a`,
+        `${import.meta.env.BASE_URL}Sassy Meow.m4a`,
+        `${import.meta.env.BASE_URL}Sparky Meow.m4a`]
 
     const playRandomMeow = () => {
         const random = meows[Math.floor(Math.random() * meows.length)]
@@ -19,8 +27,8 @@ function CharacterInfoSubSection() {
                 {/* Photo */}
                 <button className="photo-container" onClick={() => playRandomMeow()}>
                     <div className="photo-hover-wrapper">
-                        <img src="/Miraak, My Boy!!.jpg" className="photo-normal" />
-                        <img src="/Miraak, My (Evil) Boy!!.jpg" className="photo-hover" />
+                        <img src={`${import.meta.env.BASE_URL}Miraak, My Boy!!.jpg`} className="photo-normal" alt="Portrait" />
+                        <img src={`${import.meta.env.BASE_URL}Miraak, My (Evil) Boy!!.jpg`} className="photo-hover" alt="Portrait" />
                     </div>
                 </button>
 
