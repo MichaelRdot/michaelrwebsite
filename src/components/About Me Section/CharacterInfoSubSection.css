@@ -34,6 +34,10 @@
     transition: opacity 0.3s ease;
 }
 
+.char-info-card-header { font-size: var(--text-sm); }
+.char-info-card-body { font-size: var(--text-lg); }
+.photo-hint { font-size: var(--text-sm); }
+
 .photo-hover {
     opacity: 0;
 }

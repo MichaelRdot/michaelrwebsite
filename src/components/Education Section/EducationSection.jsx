@@ -5,7 +5,7 @@ const education = [
         degree: 'B.S. Computer Science, Game Design and Development',
         institution: 'Louisiana State University',
         location: 'Baton Rouge, LA',
-        dates: 'August 2019 – December 2026',
+        dates: 'August 2022 – December 2026',
         status: 'In Progress',
         statusClass: 'status-wip',
     },
