@@ -1,5 +1,6 @@
 ﻿import './CharacterInfoSubSection.css';
 import './AboutMeSection.css';
+import Button from "bootstrap/js/src/button.js";
 
 function CharacterInfoSubSection() {
     return (
@@ -8,12 +9,12 @@ function CharacterInfoSubSection() {
             <div className="about-row-1">
 
                 {/* Photo */}
-                <div className="photo-container">
+                <button className="photo-container">
                     <div className="photo-hover-wrapper">
                         <img src="/Miraak, My Boy!!.jpg" className="photo-normal" alt="Portrait" />
                         <img src="/Miraak, My (Evil) Boy!!.jpg" className="photo-hover" alt="Portrait" />
                     </div>
-                </div>
+                </button>
 
                 {/* Middle - Name & Class */}
                 <div className="info-left">
