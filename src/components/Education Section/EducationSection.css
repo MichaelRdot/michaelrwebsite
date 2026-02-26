@@ -31,6 +31,11 @@
     gap: 1rem;
 }
 
+.education-degree { font-size: var(--text-lg); }
+.education-institution { font-size: var(--text-sm); }
+.education-dates { font-size: var(--text-sm); }
+.education-status { font-size: var(--text-sm); }
+
 .education-entry-left {
     display: flex;
     flex-direction: column;

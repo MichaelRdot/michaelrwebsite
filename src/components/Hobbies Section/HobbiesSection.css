@@ -74,6 +74,9 @@
     flex: 1;
 }
 
+.hobby-name { font-size: var(--text-lg); }
+.hobby-trait { font-size: var(--text-sm); }
+
 @media (max-width: 600px) {
     .hobbies-grid {
         grid-template-columns: 1fr;

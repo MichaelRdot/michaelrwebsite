@@ -32,6 +32,11 @@
     gap: 0.5rem;
 }
 
+.project-name { font-size: var(--text-lg); }
+.project-role { font-size: var(--text-sm); }
+.project-links a { font-size: var(--text-sm); }
+.progress-badge { font-size: var(--text-sm); }
+
 .project-name {
     font-weight: bold;
     margin: 0;

@@ -27,7 +27,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     white-space: nowrap;
-    font-family: var(--font-display);
+    font: var(--font-display);
 }
 
 .header-nav {
@@ -128,8 +128,10 @@
     opacity: 0.85;
 }
 
+.header-name { font-size: var(--text-lg); }
+
 .nav-btn {
-    font-family: var(--font-heading);
+    font: var(--font-heading);
     color: var(--bs-body-bg);
     background-color: var(--box-border-color);
     border: none;

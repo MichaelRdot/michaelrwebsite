@@ -70,6 +70,11 @@
     line-height: 1.5;
 }
 
+.work-title { font-size: var(--text-lg); }
+.work-employer { font-size: var(--text-sm); }
+.work-dates { font-size: var(--text-sm); }
+.work-location { font-size: var(--text-sm); }
+
 @media (max-width: 600px) {
     .work-entry-header {
         flex-direction: column;
