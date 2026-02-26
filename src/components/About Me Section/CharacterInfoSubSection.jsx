@@ -19,8 +19,8 @@ function CharacterInfoSubSection() {
                 {/* Photo */}
                 <button className="photo-container" onClick={() => playRandomMeow()}>
                     <div className="photo-hover-wrapper">
-                        <img src="/Miraak, My Boy!!.jpg" className="photo-normal" alt="Portrait" />
-                        <img src="/Miraak, My (Evil) Boy!!.jpg" className="photo-hover" alt="Portrait" />
+                        <img src="/Miraak, My Boy!!.jpg" className="photo-normal" />
+                        <img src="/Miraak, My (Evil) Boy!!.jpg" className="photo-hover" />
                     </div>
                 </button>
 

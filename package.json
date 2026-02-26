@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MichaelRDot.github.io/michaelrwebsite",
+  "homepage": "https://MichaelRdot.github.io/michaelrwebsite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
