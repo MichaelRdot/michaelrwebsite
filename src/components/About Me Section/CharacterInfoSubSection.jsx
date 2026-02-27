@@ -24,7 +24,6 @@ function CharacterInfoSubSection() {
             <div className="about-title-bar">Character Info</div>
             <div className="about-row-1">
 
-                {/* Photo */}
                 <button className="photo-container" onClick={() => playRandomMeow()}>
                     <div className="photo-hover-wrapper">
                         <img src={`${import.meta.env.BASE_URL}Miraak, My Boy!!.jpg`} className="photo-normal" alt="Portrait" />
@@ -32,7 +31,6 @@ function CharacterInfoSubSection() {
                     </div>
                 </button>
 
-                {/* Middle - Name & Class */}
                 <div className="info-left">
                     <div className="info-card">
                         <div className="char-info-card-header">Character Name</div>
@@ -40,11 +38,10 @@ function CharacterInfoSubSection() {
                     </div>
                     <div className="info-card">
                         <div className="char-info-card-header">Class</div>
-                        <div className="char-info-card-body">Inventor</div>
+                        <div className="char-info-card-body">Inventor (Computer Science)</div>
                     </div>
                 </div>
 
-                {/* Right - Ancestry, Background, Size/Alignment/Age */}
                 <div className="info-right">
                     <div className="info-card">
                         <div className="char-info-card-header">Ancestry & Heritage</div>
@@ -52,7 +49,7 @@ function CharacterInfoSubSection() {
                     </div>
                     <div className="info-card">
                         <div className="char-info-card-header">Background</div>
-                        <div className="char-info-card-body">Scholar</div>
+                        <div className="char-info-card-body">Scholar (Software Engineering)</div>
                     </div>
                     <div className="info-row-3">
                         <div className="info-card">

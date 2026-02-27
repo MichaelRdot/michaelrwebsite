@@ -7,12 +7,11 @@ function AttributesSubSection()
             <div className="section-title-bar">Attributes</div>
             <div className="attributes-row">
                 {[
-                    { name: 'Strength', score: 12 },
-                    { name: 'Dexterity', score: 8 },
-                    { name: 'Constitution', score: 10 },
+                    { name: 'Bad Vibes', score: 0 },
+                    { name: 'Collaboration', score: 16 },
+                    { name: 'Creativity', score: 14 },
+                    { name: 'Experience', score: 12 },
                     { name: 'Intelligence', score: 14 },
-                    { name: 'Wisdom', score: 12 },
-                    { name: 'Chrasma', score: 14 },
                     { name: 'Potential', score: 20 },
                 ].map((attribute) => (
                     <div key={attribute.name} className="attribute-box">

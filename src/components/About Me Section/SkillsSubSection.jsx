@@ -6,13 +6,13 @@ function SkillsSubSection() {
             <div className="section-title-bar">Skills</div>
             <div className="skills-grid">
                 {[
+                    { attr: 'Col', name: 'Communication', rank: 'Master', rankClass: 'master' },
+                    { attr: 'Cre', name: 'Front-end', rank: 'Expert', rankClass: 'expert' },
+                    { attr: 'Exp', name: 'Problem Solving', rank: 'Expert', rankClass: 'expert' },
                     { attr: 'Int', name: 'C', rank: 'Trained', rankClass: 'trained' },
                     { attr: 'Int', name: 'C#', rank: 'Expert', rankClass: 'expert' },
                     { attr: 'Int', name: 'React', rank: 'Trained', rankClass: 'trained' },
                     { attr: 'Int', name: 'Java', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Wis', name: 'Problem Solving', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Cha', name: 'Collaboration', rank: 'Master', rankClass: 'master' },
-                    { attr: 'Cha', name: 'Creativity', rank: 'Expert', rankClass: 'expert' },
                     { attr: 'Pot', name: 'Willingness to Learn', rank: 'Legendary', rankClass: 'legendary' },
                 ].map((skill) => (
                     <div key={skill.name} className="skill-box">

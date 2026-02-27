@@ -23,38 +23,6 @@ const jobs = [
             'Organized laptop parts into multiple categories as needed.',
         ],
     },
-    {
-        title: 'Server',
-        employer: 'Starlite Cafe',
-        location: 'Gonzales, LA',
-        dates: 'February 2023 – March 2023',
-        bullets: [
-            'Operated cash register and handled transactions.',
-            'Bussed tables, cleaned, and ran food to customers.',
-        ],
-    },
-    {
-        title: 'Kitchen Worker / Server',
-        employer: 'Rotolos',
-        location: 'Prairieville, LA',
-        dates: 'January 2022 – April 2023',
-        bullets: [
-            'Operated cash register and handled transactions.',
-            'Prepared and served food items to customers.',
-            'Assisted with inventory management and restocking.',
-            'Bussed tables, cleaned, and ran food to customers.',
-        ],
-    },
-    {
-        title: 'Customer Service Associate',
-        employer: 'Old Navy',
-        location: 'Gonzales, LA',
-        dates: 'May 2021 – October 2021',
-        bullets: [
-            'Maintained store tidiness through sweeping, folding, and mopping.',
-            'Provided excellent customer service and received positive feedback.',
-        ],
-    },
 ]
 
 function WorkSection() {
