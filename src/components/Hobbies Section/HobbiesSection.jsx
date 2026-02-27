@@ -27,7 +27,7 @@ const hobbies = [
     {
         name: 'Video Games',
         traits: ['Social', 'Solo', 'Competitive', 'Creative', 'Strategic'],
-        description: 'This one is an obvious since I am a male in computer science, but my favorites include Terraria, ' +
+        description: 'This one is obvious since I am a male in computer science, but my favorites include Terraria, ' +
             'Slay the Princess, and Stardew Valley',
     },
 ]
