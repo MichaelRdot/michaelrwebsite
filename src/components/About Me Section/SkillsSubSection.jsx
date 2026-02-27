@@ -1,20 +1,61 @@
 ﻿import './SkillsSubSection.css'
 import './AboutMeSection.css'
+const skills = [
+    {
+        attr: 'Col',
+        name: 'Communication',
+        rank: 'Master',
+        rankClass: 'master'
+    },
+    {
+        attr: 'Exp',
+        name: 'Problem Solving',
+        rank: 'Expert',
+        rankClass: 'expert'
+    },
+    {
+        attr: 'Int',
+        name: 'C',
+        rank: 'Trained',
+        rankClass: 'trained'
+    },
+    {
+        attr: 'Int',
+        name: 'C#',
+        rank: 'Expert',
+        rankClass: 'expert'
+    },
+    {
+        attr: 'Int',
+        name: 'React',
+        rank: 'Trained',
+        rankClass: 'trained'
+    },
+    {
+        attr: 'Int',
+        name: 'Java',
+        rank: 'Expert',
+        rankClass: 'expert'
+    },
+    {
+        attr: 'Pot',
+        name: 'Willingness to Learn',
+        rank: 'Legendary',
+        rankClass: 'legendary'
+    },
+    {
+        attr: 'Tea',
+        name: 'Front-end',
+        rank: 'Expert',
+        rankClass: 'expert'
+    },
+]
 function SkillsSubSection() {
     return (
         <div className="skills-section">
             <div className="section-title-bar">Skills</div>
             <div className="skills-grid">
-                {[
-                    { attr: 'Int', name: 'C', rank: 'Trained', rankClass: 'trained' },
-                    { attr: 'Int', name: 'C#', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Int', name: 'React', rank: 'Trained', rankClass: 'trained' },
-                    { attr: 'Int', name: 'Java', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Wis', name: 'Problem Solving', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Cha', name: 'Collaboration', rank: 'Master', rankClass: 'master' },
-                    { attr: 'Cha', name: 'Creativity', rank: 'Expert', rankClass: 'expert' },
-                    { attr: 'Pot', name: 'Willingness to Learn', rank: 'Legendary', rankClass: 'legendary' },
-                ].map((skill) => (
+                {skills.map((skill) => (
                     <div key={skill.name} className="skill-box">
                         <span className="skill-attr">({skill.attr})</span>
                         <span className="skill-name">{skill.name}</span>
