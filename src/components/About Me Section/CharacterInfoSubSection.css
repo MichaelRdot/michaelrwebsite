@@ -117,6 +117,13 @@
     .about-row-1 {
         flex-direction: column;
     }
+    .photo-container {
+        width: 100%;          /* ← add this */
+    }
+    .photo-hover-wrapper {
+        width: 100%;          /* ← add this */
+        min-height: 220px;    /* ← add this, adjust height to taste */
+    }
     .photo-placeholder {
         width: 100%;
         min-height: 120px;

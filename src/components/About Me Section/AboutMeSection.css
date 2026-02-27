@@ -30,15 +30,11 @@
         display: flex;
         justify-content: center;
     }
-    .info-left {
-        border-right: none;
-        border-bottom: 2px solid var(--box-border-color);
-    }
     .attributes-row {
         flex-wrap: wrap;
     }
     .attribute-box {
-        flex: 0 0 calc(33% - 0.5rem);
+        flex: 0 0 100%;
     }
     .skills-grid {
         grid-template-columns: 1fr;

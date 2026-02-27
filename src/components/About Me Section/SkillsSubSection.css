@@ -41,3 +41,9 @@
 .expert   { color: #1a5276; }
 .master   { color: #6c3483; }
 .legendary { color: var(--box-border-color); }
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

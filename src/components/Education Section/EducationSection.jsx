@@ -9,14 +9,6 @@ const education = [
         status: 'In Progress',
         statusClass: 'status-wip',
     },
-    {
-        degree: 'High School Diploma',
-        institution: 'St. Amant High School',
-        location: 'St. Amant, LA',
-        dates: 'August 2018 – May 2022',
-        status: 'Complete',
-        statusClass: 'status-complete',
-    },
 ]
 
 function EducationSection() {
