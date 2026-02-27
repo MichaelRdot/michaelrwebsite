@@ -7,10 +7,6 @@ const attributes = [
         score: 0
     },
     {
-        name: 'Collaboration',
-        score: 16
-    },
-    {
         name: 'Creativity',
         score: 14
     },
@@ -25,6 +21,10 @@ const attributes = [
     {
         name: 'Potential',
         score: 20
+    },
+    {
+        name: 'Team Work',
+        score: 16
     },
 ]
 function AttributesSubSection()

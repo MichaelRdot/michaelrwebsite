@@ -3,12 +3,6 @@ import './AboutMeSection.css'
 
 const skills = [
     {
-        attr: 'Col',
-        name: 'Communication',
-        rank: 'Master',
-        rankClass: 'master'
-    },
-    {
         attr: 'Cre',
         name: 'Front-end',
         rank: 'Expert',
@@ -49,6 +43,12 @@ const skills = [
         name: 'Willingness to Learn',
         rank: 'Legendary',
         rankClass: 'legendary'
+    },
+    {
+        attr: 'Tea',
+        name: 'Communication',
+        rank: 'Master',
+        rankClass: 'master'
     },
 ]
 

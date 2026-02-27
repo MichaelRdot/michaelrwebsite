@@ -30,19 +30,21 @@ const hobbies = [
     {
         name: `Table Top Role Playing Games`,
         traits: [`Social`, `Creative`, `Strategic`],
-        description: `Table Top Role Playing Games, or TTRPGs for short, has quickly evolved to becoming the highlight 
-        of each of my weeks. I have spent countless hours sitting around the table with my friends creating these 
-        characters and stories that are so deeply thought out and fun and creative. Playing a TTRPG for me and my 
-        friends has become a group story telling experience and art form that each of us love and enjoy. I try, as often 
-        as I can, to share that message as to hopefully encourage other people to share with me this thing that I love 
-        so much.`,
+        description: `Table Top Role Playing Games (TTRPGs) has quickly evolved into becoming the highlight 
+        of each of my weeks. I have spent countless hours sitting around the table with my friends creating characters 
+        and stories that are so deeply thought out, fun, and creative that we all lose track of time. Playing a TTRPG 
+        for me and my friend group has become this rich group story telling experience and art form that each of us love 
+        and enjoy. I try, as often as I can, to share that message as to hopefully encourage other people to share with 
+        me this thing that I love so much.`,
     },
     {
         name: `Video Games`,
         traits: [`Social`, `Solo`, `Competitive`, `Creative`, `Strategic`],
-        description: `Being someone in Computer Science I know that you are the outlier if you don't enjoy a video game 
-        from time to time. I have played so many games that I can not list all of them out here (if I could even 
-        remember all of them), but my top two at the current moment are probably Terraria and Slay the Princess.`,
+        description: `It is nearly impossible to run into someone in the field of Computer Science today that does not
+        enjoy a video game or two from time to time. While I have still not gotten close to finishing a lot of the games 
+        I would like to play though, I have still played so many games over the years that I can not list all of them 
+        out here (even if I could remember all of them), but my top two at the current moment are probably Terraria and 
+        Slay the Princess.`,
     },
 ]
 
